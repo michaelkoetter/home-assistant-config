@@ -1,0 +1,15 @@
+# Temperature/Humidity/Pressure sensors
+"sensor.aqara_thp_?":
+  friendly_name: Luftdruck
+"sensor.aqara_thp_?_1":
+  friendly_name: Luftfeuchtigkeit
+"sensor.aqara_thp_?_2":
+  friendly_name: Temperatur
+
+# Window/Door sensors  
+"sensor.aqara_wd_?":
+  friendly_name: Geschlossen
+
+# Hide battery level for all sensors
+"sensor.aqara_*_battery_level":  
+  hidden: true

@@ -14,3 +14,9 @@ default_config:
 tado:
   username: !secret tado_username
   password: !secret tado_password
+
+# https://www.home-assistant.io/integrations/group/
+group: !include_dir_named groups
+
+# https://www.home-assistant.io/integrations/light.group/
+light: !include_dir_merge_list light_groups

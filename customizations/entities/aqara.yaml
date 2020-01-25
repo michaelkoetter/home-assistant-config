@@ -1,0 +1,2 @@
+binary_sensor.aqara_wd_1:
+  friendly_name: Fenster

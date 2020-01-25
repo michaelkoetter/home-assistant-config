@@ -1,9 +1,8 @@
 name: Schlafzimmer
 entities:
-  - light.hue_ctl_1
-  - light.hue_ctl_2
+  - light.bedroom_lights
   - binary_sensor.aqara_wd_1
   - sensor.aqara_thp_2
   - sensor.aqara_thp_2_2
   - sensor.aqara_thp_2_3
-  - sensor.schlafzimmer_heating
+  - climate.schlafzimmer

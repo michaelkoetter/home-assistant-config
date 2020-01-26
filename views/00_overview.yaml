@@ -34,3 +34,9 @@ cards:
     entities:
       - light.corridor_lights
       - binary_sensor.aqara_wd_2
+
+  - title: Test
+    type: entities
+    show_header_toggle: false
+    entities:
+      - group.all_lights

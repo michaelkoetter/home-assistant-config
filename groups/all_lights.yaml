@@ -1,0 +1,7 @@
+name: All Lights
+entities:
+  - light.living_room_lights
+  - light.bedroom_lights
+  - light.kitchen_lights
+  - light.bathroom_lights
+  - light.corridor_lights

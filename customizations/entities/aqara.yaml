@@ -1,4 +1,0 @@
-binary_sensor.aqara_wd_1:
-  friendly_name: Fenster
-binary_sensor.aqara_wd_2:
-  friendly_name: Wohnungstür  

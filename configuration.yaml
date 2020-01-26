@@ -1,3 +1,5 @@
+default_config:
+
 homeassistant:
   name: Home
   latitude: !secret home_latitude
@@ -8,15 +10,17 @@ homeassistant:
   customize_domain: !include_dir_merge_named customizations/domains
   customize_glob: !include_dir_merge_named customizations/globs
 
-default_config:
+lovelace:
+  mode: yaml
+
+group: !include_dir_named groups
+light: !include_dir_merge_list light_groups
+
+shell_command:
+  pull_config: cd /config && git pull -f
 
 # https://www.home-assistant.io/integrations/tado/
 tado:
   username: !secret tado_username
   password: !secret tado_password
 
-# https://www.home-assistant.io/integrations/group/
-group: !include_dir_named groups
-
-# https://www.home-assistant.io/integrations/light.group/
-light: !include_dir_merge_list light_groups

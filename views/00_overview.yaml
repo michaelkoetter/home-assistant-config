@@ -14,7 +14,8 @@ cards:
     entities: 
       - light.bedroom_lights
       - climate.schlafzimmer
-      - binary_sensor.bedroom_window
+      - entity: binary_sensor.bedroom_window
+        icon: mdi:window-closed-variant
 
   - title: Bad
     type: entities
@@ -33,4 +34,5 @@ cards:
     show_header_toggle: false
     entities:
       - light.corridor_lights
-      - binary_sensor.corridor_entrance
+      - entity: binary_sensor.corridor_entrance
+        icon: mdi:door

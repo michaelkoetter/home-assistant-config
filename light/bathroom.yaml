@@ -1,8 +1,4 @@
 - platform: group
-  name: Bathroom Ceiling
-  entities: []
-
-- platform: group
   name: Bathroom Lights
   entities:
     - light.bathroom_ceiling

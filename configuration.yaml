@@ -6,15 +6,13 @@ homeassistant:
   longitude: !secret home_longitude
   unit_system: metric
   time_zone: Europe/Berlin
-  customize: !include_dir_merge_named customizations/entities
-  customize_domain: !include_dir_merge_named customizations/domains
-  customize_glob: !include_dir_merge_named customizations/globs
+
 
 lovelace:
   mode: yaml
 
-group: !include_dir_named groups
-light: !include_dir_merge_list light_groups
+group: !include_dir_named group
+light: !include_dir_merge_list light
 
 shell_command:
   pull_config: cd /config && git pull -f

@@ -1,0 +1,30 @@
+title: Overview
+icon: mdi:home
+cards:
+  - title: Wohnzimmer
+    type: entities
+    show_header_toggle: false
+    entities:
+      - climate.wohnzimmer
+
+  - title: Schlafzimmer
+    type: entities
+    show_header_toggle: false
+    entities: 
+      - climate.schlafzimmer
+      - light.bedroom_lights
+
+  - title: Bad
+    type: entities
+    show_header_toggle: false
+    entities: []
+
+  - title: Küche
+    type: entities
+    show_header_toggle: false
+    entities: []
+
+  - title: Flur
+    type: entities
+    show_header_toggle: false
+    entities: []

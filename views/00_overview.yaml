@@ -14,7 +14,7 @@ cards:
     entities: 
       - light.bedroom_lights
       - climate.schlafzimmer
-      - binary_sensor.aqara_wd_1
+      - binary_sensor.bedroom_window
 
   - title: Bad
     type: entities
@@ -33,10 +33,4 @@ cards:
     show_header_toggle: false
     entities:
       - light.corridor_lights
-      - binary_sensor.aqara_wd_2
-
-  - title: Test
-    type: entities
-    show_header_toggle: false
-    entities:
-      - group.all_lights
+      - binary_sensor.corridor_entrance

@@ -1,4 +1,11 @@
 - platform: group
+  name: Living Room Ceiling
+  entities:
+    - light.living_room_spot_1
+    - light.living_room_spot_2
+    - light.living_room_spot_3
+
+- platform: group
   name: Living Room Lights
   entities:
     - light.living_room_ceiling

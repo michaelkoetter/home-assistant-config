@@ -28,3 +28,6 @@ cards:
     type: entities
     show_header_toggle: false
     entities: []
+
+  - type: light
+    entity: light.bedroom_lights

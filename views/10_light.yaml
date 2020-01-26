@@ -1,0 +1,18 @@
+title: Beleuchtung
+icon: mdi:lightbulb
+cards:
+  - title: Wohnzimmer
+    type: horizontal-stack
+    cards:
+      - type: light
+        entity: light.living_room_ceiling
+      - type: light
+        entity: light.living_room_tv_backlight
+
+  - title: Schlafzimmer
+    type: horizontal-stack
+    cards:
+      - type: light
+        entity: light.bedroom_ceiling
+      - type: light
+        entity: light.bedroom_bedside

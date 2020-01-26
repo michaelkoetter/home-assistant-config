@@ -1,0 +1,9 @@
+- platform: group
+  name: Kitchen Ceiling
+  entities: []
+
+- platform: group
+  name: Kitchen Lights
+  entities:
+    - light.kitchen_ceiling
+

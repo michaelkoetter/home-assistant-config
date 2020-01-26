@@ -1,33 +1,36 @@
-title: Overview
+title: Übersicht
 icon: mdi:home
 cards:
   - title: Wohnzimmer
     type: entities
     show_header_toggle: false
     entities:
+      - light.living_room_lights
       - climate.wohnzimmer
 
   - title: Schlafzimmer
     type: entities
     show_header_toggle: false
     entities: 
-      - climate.schlafzimmer
       - light.bedroom_lights
+      - climate.schlafzimmer
+      - binary_sensor.aqara_wd_1
 
   - title: Bad
     type: entities
     show_header_toggle: false
-    entities: []
+    entities:
+      - light.bathroom_lights
 
   - title: Küche
     type: entities
     show_header_toggle: false
-    entities: []
+    entities:
+      - light.kitchen_lights
 
   - title: Flur
     type: entities
     show_header_toggle: false
-    entities: []
-
-  - type: light
-    entity: light.bedroom_lights
+    entities:
+      - light.corridor_lights
+      - binary_sensor.aqara_wd_2

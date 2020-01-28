@@ -1,0 +1,7 @@
+climate.wohnzimmer:
+  name: Heizung
+  room: Wohnzimmer
+
+climate.schlafzimmer:
+  name: Heizung
+  room: Schlafzimmer

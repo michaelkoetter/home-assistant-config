@@ -1,11 +1,9 @@
-"light.bedroom_ceiling":
+light.bedroom_ceiling:
   name: Deckenlampe
   room: Schlafzimmer
+  expose: true
 
-"light.bedroom_bedside":
+light.bedroom_bedside:
   name: Nachttisch
   room: Schlafzimmer
-
-"light.bedroom_lights":
-  name: Licht
-  room: Schlafzimmer    
+  expose: true

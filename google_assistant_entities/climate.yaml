@@ -1,7 +1,9 @@
 "climate.wohnzimmer":
   name: Heizung
   room: Wohnzimmer
+  expose: true
 
 "climate.schlafzimmer":
   name: Heizung
   room: Schlafzimmer
+  expose: true

@@ -24,4 +24,13 @@ tado:
   username: !secret tado_username
   password: !secret tado_password
 
-google_assistant: !include google_assistant.yaml
+google_assistant: 
+  project_id: !secret google_assistant_project_id
+  service_account:
+    client_email: !secret google_assistant_service_account_email
+    private_key: !secret google_assistant_service_account_key
+
+  report_state: true
+
+  expose_by_default: false
+  entity_config: !include_dir_merge_named google_assistant_entities

@@ -1,0 +1,6 @@
+project_id: !secret google_assistant_project_id
+service_account:
+  client_email: !secret google_assistant_service_account_email
+  private_key: !secret google_assistant_service_account_key
+
+report_state: true  

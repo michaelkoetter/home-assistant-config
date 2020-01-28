@@ -9,7 +9,7 @@ homeassistant:
 
 http:
   base_url: !secret base_url
-  
+
 lovelace:
   mode: yaml
 
@@ -24,3 +24,4 @@ tado:
   username: !secret tado_username
   password: !secret tado_password
 
+google_assistant: !include google_assistant.yaml

@@ -1,7 +1,7 @@
-climate.wohnzimmer:
+"climate.wohnzimmer":
   name: Heizung
   room: Wohnzimmer
 
-climate.schlafzimmer:
+"climate.schlafzimmer":
   name: Heizung
   room: Schlafzimmer

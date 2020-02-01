@@ -24,10 +24,6 @@ tado:
   username: !secret tado_username
   password: !secret tado_password
 
-deconz:
-  host: deconz.deconz
-  port: 8080
-  
 google_assistant: 
   project_id: !secret google_assistant_project_id
   service_account:

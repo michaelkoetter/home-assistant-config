@@ -19,11 +19,6 @@ light: !include_dir_merge_list light
 shell_command:
   pull_config: cd /config && git pull -f
 
-zha:
-  usb_path: /dev/ttyACM0
-  radio_type: deconz
-  database_path: /config/zigbee.db
-
 # https://www.home-assistant.io/integrations/tado/
 tado:
   username: !secret tado_username

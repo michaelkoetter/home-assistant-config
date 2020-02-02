@@ -5,14 +5,16 @@ cards:
     type: entities
     show_header_toggle: false
     entities:
-      - light.living_room_lights
+      - light.living_room_ceiling
+      - light.living_room_tv_backlight
       - climate.wohnzimmer
 
   - title: Schlafzimmer
     type: entities
     show_header_toggle: false
     entities: 
-      - light.bedroom_lights
+      - light.bedroom_ceiling
+      - light.bedroom_bedside
       - climate.schlafzimmer
       - entity: binary_sensor.bedroom_window
         icon: mdi:window-closed-variant
@@ -21,18 +23,18 @@ cards:
     type: entities
     show_header_toggle: false
     entities:
-      - light.bathroom_lights
+      - light.bathroom_ceiling
 
   - title: Küche
     type: entities
     show_header_toggle: false
     entities:
-      - light.kitchen_lights
+      - light.kitchen_ceiling
 
   - title: Flur
     type: entities
     show_header_toggle: false
     entities:
-      - light.corridor_lights
+      - light.corridor_ceiling
       - entity: binary_sensor.corridor_entrance
         icon: mdi:door

@@ -1,0 +1,16 @@
+- name: living_room_watch_movie
+  entities:
+    light.living_room_spot_1:
+      state: on
+      brightness: 100
+      color_temp: 450
+    light.living_room_spot_2:
+      state: on
+      brightness: 100
+      color_temp: 450
+    light.living_room_spot_3:
+      state: off
+    light.living_room_tv_backlight:
+      state: on
+      brightness: 100
+      color_temp: 450

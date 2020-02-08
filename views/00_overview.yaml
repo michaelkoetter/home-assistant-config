@@ -16,7 +16,7 @@ cards:
       - light.bedroom_ceiling
       - light.bedroom_bedside
       - climate.schlafzimmer
-      - entity: binary_sensor.bedroom_window
+      - entity: binary_sensor.bedroom_window_contact
         icon: mdi:window-closed-variant
 
   - title: Bad
@@ -36,5 +36,5 @@ cards:
     show_header_toggle: false
     entities:
       - light.corridor_ceiling
-      - entity: binary_sensor.corridor_entrance
+      - entity: binary_sensor.corridor_entrance_contact
         icon: mdi:door

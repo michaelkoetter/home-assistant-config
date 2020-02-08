@@ -6,6 +6,7 @@ homeassistant:
   longitude: !secret home_longitude
   unit_system: metric
   time_zone: Europe/Berlin
+  packages: !include_dir_named packages
 
 http:
   base_url: !secret base_url

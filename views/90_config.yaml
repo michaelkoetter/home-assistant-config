@@ -1,0 +1,9 @@
+title: Einstellungen
+cards:
+  - title: Zigbee
+    type: entities
+    show_header_toggle: false
+    entities:
+      - entity: sensor.zigbee2mqtt_bridge_state
+      - entity: switch.zigbee2mqtt_main_join
+      - entity: timer.zigbee_permit_join

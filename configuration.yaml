@@ -33,9 +33,6 @@ mqtt:
     topic: 'hass/status'
     payload: 'offline'
       
-esphome:
-  password: !secret esphome_password
-  
 # https://www.home-assistant.io/integrations/tado/
 tado:
   username: !secret tado_username

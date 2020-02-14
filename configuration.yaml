@@ -32,7 +32,7 @@ mqtt:
   will_message:
     topic: 'hass/status'
     payload: 'offline'
-      
+
 # https://www.home-assistant.io/integrations/tado/
 tado:
   username: !secret tado_username
@@ -48,3 +48,11 @@ google_assistant:
 
   expose_by_default: false
   entity_config: !include_dir_merge_named google_assistant_entities
+
+octoprint:
+  host: !secret octoprint_host
+  port: 5000
+  apikey: !secret octoprint_apikey
+  name: CR10S-Pro
+  bed: true
+  number_of_tools: 1

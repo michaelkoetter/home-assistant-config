@@ -52,7 +52,7 @@ google_assistant:
 octoprint:
   host: !secret octoprint_host
   port: 5000
-  apikey: !secret octoprint_apikey
+  api_key: !secret octoprint_apikey
   name: CR10S-Pro
   bed: true
   number_of_tools: 1

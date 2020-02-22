@@ -1,4 +1,4 @@
-- name: living_room_watch_movie
+- name: Watch Movie
   entities:
     light.living_room_spot_1:
       state: on

@@ -1,0 +1,8 @@
+- alias: Active "Watch Movie" scene when TV is on
+  trigger:
+    platform: state
+    entity_id: media_player.living_room_tv
+    to: "on"
+  action:
+    service: scene.turn_on
+    entity_id: scene.watch_movie

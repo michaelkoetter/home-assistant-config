@@ -5,11 +5,10 @@
     to: "on"
   action:
     - service: scene.create
-      data:
+      data_template:
         scene_id: restore_bedroom_climate_state
-        snapshot_entities:
-          - climate.schlafzimmer
-
+        entities:
+          climate.schlafzimmer: "{{ states('climate.schlafzimmer') }}"
     - service: climate.set_hvac_mode
       data:
         entity_id: climate.schlafzimmer

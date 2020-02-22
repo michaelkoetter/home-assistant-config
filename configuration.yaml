@@ -57,3 +57,8 @@ octoprint:
   name: CR10S-Pro
   bed: true
   number_of_tools: 1
+
+remote:
+  - platform: harmony
+    name: Harmony Hub
+    host: harmonyhub

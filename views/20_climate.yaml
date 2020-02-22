@@ -1,3 +1,14 @@
 title: Klima
 icon: mdi:thermometer-lines
-cards: []
+cards:
+  - type: thermostat
+    entity: climate.wohnzimmer
+
+  - type: thermostat
+    entity: climate.schlafzimmer
+
+  - type: thermostat
+    entity: climate.bad
+
+  - type: thermostat
+    entity: climate.kuche        

@@ -62,3 +62,7 @@ remote:
   - platform: harmony
     name: Harmony Hub
     host: harmonyhub
+
+webostv:
+  name: Living Room TV
+  host: lgwebostv

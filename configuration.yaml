@@ -17,6 +17,7 @@ lovelace:
 group: !include_dir_named group
 light: !include_dir_merge_list light
 scene: !include_dir_merge_list scene
+automation: !include_dir_merge_list automation
 
 shell_command:
   pull_config: cd /config && git pull -f

@@ -24,12 +24,14 @@ cards:
     show_header_toggle: false
     entities:
       - light.bathroom_ceiling
+      - climate.bad
 
   - title: Küche
     type: entities
     show_header_toggle: false
     entities:
       - light.kitchen_ceiling
+      - climate.kuche
 
   - title: Flur
     type: entities

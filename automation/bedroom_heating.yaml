@@ -1,0 +1,27 @@
+- alias: Turn off bedroom heating when window is open
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bedroom_window_contact
+    to: "on"
+  action:
+    - service: scene.create
+      data:
+        scene_id: restore_bedroom_climate_state
+        snapshot_entities:
+          - climate.schlafzimmer
+
+    - service: climate.set_hvac_mode
+      data:
+        entity_id: climate.schlafzimmer
+        hvac_mode: "off"
+
+- alias: Restore bedroom heating when window is closed
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bedroom_window_contact
+    to: "off"
+  action:
+    service: scene.turn_on
+    data:
+      entity_id: scene.restore_bedroom_climate_state
+  

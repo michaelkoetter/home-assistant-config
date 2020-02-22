@@ -1,7 +1,7 @@
-- alias: Active "Watch Movie" scene when TV is on
+- alias: Active "Watch Movie" scene when Harmony Hub is on
   trigger:
     platform: state
-    entity_id: media_player.living_room_tv
+    entity_id: remote.harmony_hub
     to: "on"
   action:
     service: scene.turn_on

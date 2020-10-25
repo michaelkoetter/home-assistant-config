@@ -1,7 +1,7 @@
-# Input select for Zigbee2mqtt debug level
+# Input select for Zigbee2MQTT debug level
 input_select:
   zigbee2mqtt_log_level:
-    name: Zigbee2mqtt Log Level
+    name: Zigbee2MQTT Log Level
     options:
       - debug
       - info
@@ -10,19 +10,19 @@ input_select:
     initial: info
     icon: mdi:format-list-bulleted
 
-# Input text to input Zigbee2mqtt friendly_name for scripts
+# Input text to input Zigbee2MQTT friendly_name for scripts
 input_text:
   zigbee2mqtt_old_name:
-    name: Zigbee2mqtt Old Name
+    name: Zigbee2MQTT Old Name
   zigbee2mqtt_new_name:
-    name: Zigbee2mqtt New Name
+    name: Zigbee2MQTT New Name
   zigbee2mqtt_remove:
-    name: Zigbee2mqtt Remove
+    name: Zigbee2MQTT Remove
 
 # Scripts for renaming & removing devices
 script:
   zigbee2mqtt_rename:
-    alias: Zigbee2mqtt Rename
+    alias: Zigbee2MQTT Rename
     sequence:
       service: mqtt.publish
       data_template:
@@ -33,7 +33,7 @@ script:
             "new": "{{ states.input_text.zigbee2mqtt_new_name.state | string }}"
           }
   zigbee2mqtt_remove:
-    alias: Zigbee2mqtt Remove
+    alias: Zigbee2MQTT Remove
     sequence:
       service: mqtt.publish
       data_template:
@@ -44,17 +44,17 @@ script:
 timer:
   zigbee_permit_join:
     name: Time remaining
-    duration: 600
+    duration: 120
 
 sensor:
   # Sensor for monitoring the bridge state
   - platform: mqtt
-    name: Zigbee2mqtt Bridge state
+    name: Zigbee2MQTT Bridge state
     state_topic: "zigbee2mqtt/bridge/state"
     icon: mdi:router-wireless
-  # Sensor for Showing the Zigbee2mqtt Version
+  # Sensor for Showing the Zigbee2MQTT Version
   - platform: mqtt
-    name: Zigbee2mqtt Version
+    name: Zigbee2MQTT Version
     state_topic: "zigbee2mqtt/bridge/config"
     value_template: "{{ value_json.version }}"
     icon: mdi:zigbee
@@ -68,7 +68,7 @@ sensor:
 # Switch for enabling joining
 switch:
   - platform: mqtt
-    name: "Zigbee2mqtt Main join"
+    name: "Zigbee2MQTT Main join"
     state_topic: "zigbee2mqtt/bridge/config/permit_join"
     command_topic: "zigbee2mqtt/bridge/config/permit_join"
     payload_on: "true"
@@ -76,7 +76,8 @@ switch:
 
 automation:
   # Automation for sending MQTT message on input select change
-  - alias: Zigbee2mqtt Log Level
+  - id: zigbee2mqtt_log_level
+    alias: Zigbee2MQTT log level
     initial_state: "on"
     trigger:
       platform: state
@@ -113,3 +114,18 @@ automation:
           entity_id: timer.zigbee_permit_join
       - service: switch.turn_off
         entity_id: switch.zigbee2mqtt_main_join
+  - id: "zigbee2mqtt_create_notification_on_successfull_interview"
+    alias: Zigbee Device Joined Notification
+    trigger:
+      platform: mqtt
+      topic: 'zigbee2mqtt/bridge/log'
+    condition:
+      condition: template
+      value_template: '{{trigger.payload_json.type == "pairing" and trigger.payload_json.message == "interview_successful"}}'
+    action:
+      - service: persistent_notification.create
+        data_template:
+          title: Device joined the Zigbee2MQTT network
+          message: "Name: {{trigger.payload_json.meta.friendly_name}},
+                    Vendor: {{trigger.payload_json.meta.vendor}},
+                    Description: {{trigger.payload_json.meta.description}}"

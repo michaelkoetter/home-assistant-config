@@ -1,11 +1,6 @@
 default_config:
 
 homeassistant:
-  name: Home
-  latitude: !secret home_latitude
-  longitude: !secret home_longitude
-  unit_system: metric
-  time_zone: Europe/Berlin
   packages: !include_dir_named packages
 
 http:
@@ -24,45 +19,36 @@ shell_command:
 
 mqtt:
   broker: !secret mqtt_broker
-  username: !secret mqtt_username
-  password: !secret mqtt_password
+  port: !secret mqtt_port
   discovery: true
-  birth_message:
-    topic: 'hass/status'
-    payload: 'online'
-  will_message:
-    topic: 'hass/status'
-    payload: 'offline'
+  certificate: /tls/ca.crt
+  client_key: /tls/tls.key
+  client_cert: /tls/tls.crt
 
-# https://www.home-assistant.io/integrations/tado/
-tado:
-  username: !secret tado_username
-  password: !secret tado_password
+# google_assistant: 
+#   project_id: !secret google_assistant_project_id
+#   service_account:
+#     client_email: !secret google_assistant_service_account_email
+#     private_key: !secret google_assistant_service_account_key
 
-google_assistant: 
-  project_id: !secret google_assistant_project_id
-  service_account:
-    client_email: !secret google_assistant_service_account_email
-    private_key: !secret google_assistant_service_account_key
+#   report_state: true
 
-  report_state: true
+#   expose_by_default: false
+#   entity_config: !include_dir_merge_named google_assistant_entities
 
-  expose_by_default: false
-  entity_config: !include_dir_merge_named google_assistant_entities
+# octoprint:
+#   host: !secret octoprint_host
+#   port: 5000
+#   api_key: !secret octoprint_apikey
+#   name: CR10S-Pro
+#   bed: true
+#   number_of_tools: 1
 
-octoprint:
-  host: !secret octoprint_host
-  port: 5000
-  api_key: !secret octoprint_apikey
-  name: CR10S-Pro
-  bed: true
-  number_of_tools: 1
+# remote:
+#   - platform: harmony
+#     name: Harmony Hub
+#     host: harmonyhub
 
-remote:
-  - platform: harmony
-    name: Harmony Hub
-    host: harmonyhub
-
-webostv:
-  name: Living Room TV
-  host: lgwebostv
+# webostv:
+#   name: Living Room TV
+#   host: lgwebostv

@@ -2,9 +2,8 @@ default_config:
 
 homeassistant:
   packages: !include_dir_named packages
-
-http:
-  base_url: !secret base_url
+  external_url: !secret base_url
+  internal_url: !secret base_url
 
 lovelace:
   mode: yaml

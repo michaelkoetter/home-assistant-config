@@ -1,16 +1,16 @@
 - name: Watch Movie
   entities:
     light.living_room_spot_1_light:
-      state: on
+      state: "on"
       brightness: 100
       color_temp: 450
     light.living_room_spot_2_light:
-      state: on
+      state: "on"
       brightness: 100
       color_temp: 450
     light.living_room_spot_3_light:
-      state: off
+      state: "off"
     light.living_room_tv_strip_light:
-      state: on
+      state: "on"
       brightness: 100
       color_temp: 450

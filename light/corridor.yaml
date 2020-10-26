@@ -1,5 +1,5 @@
 - platform: group
   name: Corridor Lights
   entities:
-    - light.corridor_ceiling
+    - light.corridor_ceiling_light
 

@@ -1,5 +1,5 @@
 - platform: group
   name: Kitchen Lights
   entities:
-    - light.kitchen_ceiling
+    - light.kitchen_ceiling_light
 

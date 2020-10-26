@@ -1,12 +1,12 @@
 - platform: group
   name: Living Room Ceiling
   entities:
-    - light.living_room_spot_1
-    - light.living_room_spot_2
-    - light.living_room_spot_3
+    - light.living_room_spot_1_light
+    - light.living_room_spot_2_light
+    - light.living_room_spot_3_light
 
 - platform: group
   name: Living Room Lights
   entities:
     - light.living_room_ceiling
-    - light.living_room_tv_backlight
+    - light.living_room_tv_strip_light

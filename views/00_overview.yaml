@@ -6,15 +6,15 @@ cards:
     show_header_toggle: false
     entities:
       - light.living_room_ceiling
-      - light.living_room_tv_backlight
+      - light.living_room_tv_strip_light
       - climate.wohnzimmer
 
   - title: Schlafzimmer
     type: entities
     show_header_toggle: false
     entities: 
-      - light.bedroom_ceiling
-      - light.bedroom_bedside
+      - light.bedroom_ceiling_light
+      - light.bedroom_bedside_light
       - climate.schlafzimmer
       - entity: binary_sensor.bedroom_window_contact
         icon: mdi:window-closed-variant
@@ -23,20 +23,20 @@ cards:
     type: entities
     show_header_toggle: false
     entities:
-      - light.bathroom_ceiling
+      - light.bathroom_ceiling_light
       - climate.bad
 
   - title: Küche
     type: entities
     show_header_toggle: false
     entities:
-      - light.kitchen_ceiling
+      - light.kitchen_ceiling_light
       - climate.kuche
 
   - title: Flur
     type: entities
     show_header_toggle: false
     entities:
-      - light.corridor_ceiling
+      - light.corridor_ceiling_light
       - entity: binary_sensor.corridor_entrance_contact
         icon: mdi:door
